@@ -19,8 +19,20 @@ export interface Product {
   features: string[];
 }
 
-// Using placeholder for product images - in production these would be real product photos
-const placeholderImage = "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop";
+// Product images - real photos from the store and professional images
+import productDiapers1 from "@/assets/product-diapers-1.jpg";
+import productDiapers2 from "@/assets/product-diapers-2.jpg";
+import productDiapers3 from "@/assets/product-diapers-3.jpg";
+import productPacifier from "@/assets/product-pacifier.jpg";
+import productShampoo from "@/assets/product-shampoo.jpg";
+import productBodysuit from "@/assets/product-bodysuit.jpg";
+import productBlanket from "@/assets/product-blanket.jpg";
+import productWipes from "@/assets/product-wipes.jpg";
+import productTeether from "@/assets/product-teether.jpg";
+import productPajamas from "@/assets/product-pajamas.jpg";
+import productHighchair from "@/assets/product-highchair.png";
+import productWalker from "@/assets/product-walker.png";
+import productCar from "@/assets/product-car.png";
 
 export const mockProducts: Product[] = [
   {
@@ -28,7 +40,7 @@ export const mockProducts: Product[] = [
     name: "Pañales Premium Recién Nacido",
     price: 45000,
     originalPrice: 55000,
-    image: placeholderImage,
+    image: productDiapers1,
     category: "Pañales",
     categoryId: "panales",
     description: "Pañales ultra suaves con tecnología absorbente de última generación. Perfectos para la piel delicada de tu recién nacido.",
@@ -51,7 +63,7 @@ export const mockProducts: Product[] = [
     id: "2",
     name: "Pañales Ecológicos Etapa 2",
     price: 52000,
-    image: placeholderImage,
+    image: productDiapers2,
     category: "Pañales",
     categoryId: "panales",
     description: "Pañales biodegradables con materiales naturales. Cuida de tu bebé y del planeta.",
@@ -73,7 +85,7 @@ export const mockProducts: Product[] = [
     name: "Chupetes Ortodónticos Pack x3",
     price: 28000,
     originalPrice: 35000,
-    image: placeholderImage,
+    image: productPacifier,
     category: "Accesorios",
     categoryId: "accesorios",
     description: "Pack de 3 chupetes con diseño ortodóntico que favorece el desarrollo bucal correcto.",
@@ -93,7 +105,7 @@ export const mockProducts: Product[] = [
     id: "4",
     name: "Biberones Anti-Cólicos 260ml",
     price: 38000,
-    image: placeholderImage,
+    image: productPacifier,
     category: "Accesorios",
     categoryId: "accesorios",
     description: "Biberones con sistema anti-cólicos que reduce el malestar digestivo del bebé.",
@@ -113,7 +125,7 @@ export const mockProducts: Product[] = [
     id: "5",
     name: "Shampoo Natural para Bebé 400ml",
     price: 32000,
-    image: placeholderImage,
+    image: productShampoo,
     category: "Cuidado Personal",
     categoryId: "cuidado",
     description: "Shampoo con ingredientes naturales, sin sulfatos ni parabenos. Ideal para el cuero cabelludo sensible.",
@@ -135,7 +147,7 @@ export const mockProducts: Product[] = [
     name: "Crema Protectora Pañal 100g",
     price: 24000,
     originalPrice: 30000,
-    image: placeholderImage,
+    image: productShampoo,
     category: "Cuidado Personal",
     categoryId: "cuidado",
     description: "Crema protectora que previene y alivia las rozaduras del pañal con óxido de zinc.",
@@ -156,7 +168,7 @@ export const mockProducts: Product[] = [
     id: "7",
     name: "Body de Algodón Orgánico Pack x3",
     price: 65000,
-    image: placeholderImage,
+    image: productBodysuit,
     category: "Ropa y Textiles",
     categoryId: "ropa",
     description: "Pack de 3 bodies en colores pastel, hechos con algodón orgánico certificado.",
@@ -178,7 +190,7 @@ export const mockProducts: Product[] = [
     name: "Manta Suave de Bambú",
     price: 48000,
     originalPrice: 60000,
-    image: placeholderImage,
+    image: productBlanket,
     category: "Ropa y Textiles",
     categoryId: "ropa",
     description: "Manta ultra suave de fibra de bambú, transpirable y termorreguladora.",
@@ -199,7 +211,7 @@ export const mockProducts: Product[] = [
     id: "9",
     name: "Toallitas Húmedas Premium x80",
     price: 18000,
-    image: placeholderImage,
+    image: productWipes,
     category: "Cuidado Personal",
     categoryId: "cuidado",
     description: "Toallitas húmedas con loción humectante, sin alcohol ni fragancias fuertes.",
@@ -219,7 +231,7 @@ export const mockProducts: Product[] = [
     id: "10",
     name: "Mordedor Refrigerante",
     price: 22000,
-    image: placeholderImage,
+    image: productTeether,
     category: "Accesorios",
     categoryId: "accesorios",
     description: "Mordedor con gel refrigerante que alivia las molestias de la dentición.",
@@ -238,7 +250,7 @@ export const mockProducts: Product[] = [
     id: "11",
     name: "Pañales Nocturnos Extra Absorción",
     price: 58000,
-    image: placeholderImage,
+    image: productDiapers3,
     category: "Pañales",
     categoryId: "panales",
     description: "Pañales especiales para la noche con extra absorción que garantizan 12 horas de sequedad.",
@@ -260,7 +272,7 @@ export const mockProducts: Product[] = [
     name: "Set de Pijamas Térmicas",
     price: 75000,
     originalPrice: 95000,
-    image: placeholderImage,
+    image: productPajamas,
     category: "Ropa y Textiles",
     categoryId: "ropa",
     description: "Set de 2 pijamas térmicas para mantener al bebé abrigado toda la noche.",
@@ -275,6 +287,73 @@ export const mockProducts: Product[] = [
       "Pies integrados",
       "Cierre completo",
       "Ultra suave"
+    ]
+  },
+  {
+    id: "13",
+    name: "Silla de Comer Baby Premium",
+    price: 189000,
+    originalPrice: 220000,
+    image: productHighchair,
+    category: "Accesorios",
+    categoryId: "accesorios",
+    description: "Silla de comer con diseño ergonómico, bandeja extraíble y altura ajustable. Perfecta para la hora de las comidas.",
+    rating: 5,
+    stock: 6,
+    discount: 14,
+    brand: "Baby Care",
+    age: "6-36 meses",
+    features: [
+      "Bandeja extraíble",
+      "Altura ajustable",
+      "Fácil de limpiar",
+      "Base estable",
+      "Colores vibrantes"
+    ]
+  },
+  {
+    id: "14",
+    name: "Caminador Musical Interactivo",
+    price: 165000,
+    image: productWalker,
+    category: "Accesorios",
+    categoryId: "accesorios",
+    description: "Caminador con juguetes interactivos, música y luces. Ayuda al desarrollo motor del bebé de forma segura y divertida.",
+    rating: 5,
+    stock: 4,
+    isNew: true,
+    brand: "Fun Steps",
+    age: "6-18 meses",
+    features: [
+      "Juguetes interactivos",
+      "Música y luces",
+      "Base antivuelco",
+      "Altura regulable",
+      "Estimula el desarrollo motor"
+    ]
+  },
+  {
+    id: "15",
+    name: "Carro Eléctrico Montable Deportivo",
+    price: 420000,
+    originalPrice: 500000,
+    image: productCar,
+    category: "Accesorios",
+    categoryId: "accesorios",
+    description: "Carro montable eléctrico con diseño deportivo, control remoto para padres y luces LED. Diversión asegurada para los pequeños.",
+    rating: 5,
+    stock: 2,
+    discount: 16,
+    isNew: true,
+    brand: "Sport Kids",
+    age: "2-5 años",
+    features: [
+      "Motor eléctrico",
+      "Control remoto parental",
+      "Luces LED",
+      "Diseño deportivo",
+      "Batería recargable",
+      "Velocidad ajustable"
     ]
   }
 ];
