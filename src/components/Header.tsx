@@ -16,12 +16,8 @@ const Header = () => {
         {/* Top Bar */}
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 transition-smooth hover:scale-105">
-            <img src={logo} alt="La Elegancia del Baby" className="h-12 w-12" />
-            <div className="hidden md:flex flex-col">
-              <span className="font-display text-xl text-primary-foreground">La Elegancia</span>
-              <span className="text-sm text-muted-foreground -mt-1">del Baby</span>
-            </div>
+          <Link to="/" className="transition-smooth hover:scale-105">
+            <img src={logo} alt="La Elegancia del Baby" className="h-16 w-auto" />
           </Link>
 
           {/* Search Bar - Desktop */}
