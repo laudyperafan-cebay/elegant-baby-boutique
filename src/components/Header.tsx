@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import logo from "@/assets/logo.png";
+import { useCart } from "@/contexts/CartContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartItems] = useState(0);
+  const { totalItems } = useCart();
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-soft">
@@ -38,14 +39,16 @@ const Header = () => {
               <User className="h-5 w-5" />
             </Button>
             
-            <Button variant="ghost" size="icon" className="rounded-full relative">
-              <ShoppingCart className="h-5 w-5" />
-              {cartItems > 0 && (
-                <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-primary text-primary-foreground">
-                  {cartItems}
-                </Badge>
-              )}
-            </Button>
+            <Link to="/carrito">
+              <Button variant="ghost" size="icon" className="rounded-full relative">
+                <ShoppingCart className="h-5 w-5" />
+                {totalItems > 0 && (
+                  <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-primary text-primary-foreground">
+                    {totalItems}
+                  </Badge>
+                )}
+              </Button>
+            </Link>
 
             <Button
               variant="ghost"

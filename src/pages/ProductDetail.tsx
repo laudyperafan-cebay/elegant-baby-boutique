@@ -9,11 +9,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ShoppingCart, Heart, Star, Check, Truck, Shield, ArrowLeft } from "lucide-react";
 import { getProductById, mockProducts } from "@/data/mockProducts";
 import { useToast } from "@/hooks/use-toast";
+import { useCart } from "@/contexts/CartContext";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const product = getProductById(id || "");
   const { toast } = useToast();
+  const { addToCart } = useCart();
 
   const [quantity, setQuantity] = useState(1);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -41,6 +43,7 @@ const ProductDetail = () => {
     .slice(0, 4);
 
   const handleAddToCart = () => {
+    addToCart(product, quantity);
     toast({
       title: "¡Producto agregado!",
       description: `${quantity} unidad(es) de ${product.name} agregadas al carrito.`,
