@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, MapPin, Phone, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -21,28 +21,31 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/p/Pa%C3%B1alera-Elegancia-Del-BABY-NEIVA-100092431112023/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-smooth"
+                title="Sede Neiva"
               >
                 <Facebook className="h-4 w-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.facebook.com/p/Pa%C3%B1alera-Elegancia-Del-Baby-La-Plata-100069245627041/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-smooth"
+                title="Sede La Plata"
               >
-                <Instagram className="h-4 w-4" />
+                <Facebook className="h-4 w-4" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.facebook.com/profile.php?id=100063739052782"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-smooth"
+                title="Otra Sede"
               >
-                <Twitter className="h-4 w-4" />
+                <Facebook className="h-4 w-4" />
               </a>
             </div>
           </div>
