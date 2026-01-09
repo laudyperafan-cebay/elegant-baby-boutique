@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Logo y Descripción */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src={footerLogo} alt="Pañalera Elegancia del Baby" className="h-20 w-auto" />
+              <img src={footerLogo} alt="Pañalera Elegancia del Baby" className="h-28 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               En <span className="text-primary font-medium">La Elegancia del Baby</span> cuidamos lo más valioso de tu hogar. 
