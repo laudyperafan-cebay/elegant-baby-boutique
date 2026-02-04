@@ -70,8 +70,8 @@ const Hero = () => {
                   <span className="text-2xl">🏪</span>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-primary-foreground">4 Sucursales</p>
-                  <p className="text-xs text-foreground/70">En 3 ciudades</p>
+                  <p className="text-sm font-medium text-primary-foreground">3 Sucursales</p>
+                  <p className="text-xs text-foreground/70">Neiva, Soacha, La Plata</p>
                 </div>
               </div>
             </div>

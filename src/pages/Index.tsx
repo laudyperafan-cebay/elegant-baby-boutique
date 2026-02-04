@@ -149,10 +149,10 @@ const Index = () => {
                 <span className="text-3xl">🏪</span>
               </div>
               <h3 className="font-display text-xl text-primary-foreground">
-                4 Sucursales
+                3 Sucursales
               </h3>
               <p className="text-sm text-muted-foreground">
-                En Neiva, Bogotá y Armenia. Recoge en tienda o envío a domicilio
+                En Neiva, San Mateo-Soacha y La Plata. Recoge en tienda o envío a domicilio
               </p>
             </div>
           </div>
