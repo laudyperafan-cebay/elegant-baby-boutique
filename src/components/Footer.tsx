@@ -70,7 +70,9 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">+57 (123) 456-7890</span>
+                <a href="https://wa.me/573209694966" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  +57 320 969 4966
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
@@ -79,8 +81,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                 <div className="text-muted-foreground">
-                  <p>Sucursal Principal</p>
-                  <p className="font-medium text-foreground/80">Neiva, Huila</p>
+                  <p className="font-medium text-foreground/80">3 Sucursales:</p>
+                  <p>Neiva • San Mateo-Soacha • La Plata</p>
                 </div>
               </li>
               <li className="mt-4">
@@ -88,7 +90,7 @@ const Footer = () => {
                   to="/sucursales" 
                   className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors text-sm underline-offset-4 hover:underline"
                 >
-                  Ver todas nuestras sucursales →
+                  Ver horarios y ubicaciones →
                 </Link>
               </li>
             </ul>
