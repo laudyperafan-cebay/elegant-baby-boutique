@@ -19,17 +19,20 @@ export interface Product {
   features: string[];
 }
 
-// Product images - real photos from the store and professional images
-import productDiapers1 from "@/assets/product-diapers-1.jpg";
-import productDiapers2 from "@/assets/product-diapers-2.jpg";
-import productDiapers3 from "@/assets/product-diapers-3.jpg";
-import productPacifier from "@/assets/product-pacifier.jpg";
-import productShampoo from "@/assets/product-shampoo.jpg";
-import productBodysuit from "@/assets/product-bodysuit.jpg";
-import productBlanket from "@/assets/product-blanket.jpg";
-import productWipes from "@/assets/product-wipes.jpg";
-import productTeether from "@/assets/product-teether.jpg";
-import productPajamas from "@/assets/product-pajamas.jpg";
+// Product images - generated professional images
+import productDiaper from "@/assets/product-diaper-pack.jpg";
+import productFormula from "@/assets/product-formula.jpg";
+import productToys from "@/assets/product-toys.jpg";
+import productStroller from "@/assets/product-stroller.jpg";
+import productBottles from "@/assets/product-bottles.jpg";
+import productHygiene from "@/assets/product-hygiene.jpg";
+import productWipes from "@/assets/product-wipes-new.jpg";
+import productBlanket from "@/assets/product-blanket-new.jpg";
+import productTeethers from "@/assets/product-teethers.jpg";
+import productMobile from "@/assets/product-mobile.jpg";
+import productOnesie from "@/assets/product-onesie.jpg";
+import productCream from "@/assets/product-cream.jpg";
+import productBathtub from "@/assets/product-bathtub.jpg";
 import productHighchair from "@/assets/product-highchair.png";
 import productWalker from "@/assets/product-walker.png";
 import productCar from "@/assets/product-car.png";
@@ -40,7 +43,7 @@ export const mockProducts: Product[] = [
     name: "Pañales Premium Recién Nacido",
     price: 45000,
     originalPrice: 55000,
-    image: productDiapers1,
+    image: productDiaper,
     category: "Pañales",
     categoryId: "panales",
     description: "Pañales ultra suaves con tecnología absorbente de última generación. Perfectos para la piel delicada de tu recién nacido.",
@@ -61,98 +64,225 @@ export const mockProducts: Product[] = [
   },
   {
     id: "2",
-    name: "Pañales Ecológicos Etapa 2",
-    price: 52000,
-    image: productDiapers2,
-    category: "Pañales",
-    categoryId: "panales",
-    description: "Pañales biodegradables con materiales naturales. Cuida de tu bebé y del planeta.",
+    name: "Leche de Fórmula Premium Etapa 1",
+    price: 85000,
+    originalPrice: 95000,
+    image: productFormula,
+    category: "Alimentación",
+    categoryId: "alimentacion",
+    description: "Leche de fórmula enriquecida con DHA y vitaminas esenciales para el desarrollo óptimo de tu bebé.",
     rating: 5,
     stock: 15,
     isNew: true,
-    brand: "Eco Baby",
-    size: "Talla 2 (3-6kg)",
-    age: "1-4 meses",
+    discount: 11,
+    brand: "Premium Baby",
+    size: "900g",
+    age: "0-6 meses",
     features: [
-      "100% biodegradable",
-      "Sin químicos",
-      "Certificado ecológico",
-      "Super absorbente"
+      "Enriquecida con DHA",
+      "Vitaminas esenciales",
+      "Fácil digestión",
+      "Desarrollo cerebral"
     ]
   },
   {
     id: "3",
-    name: "Chupetes Ortodónticos Pack x3",
-    price: 28000,
-    originalPrice: 35000,
-    image: productPacifier,
-    category: "Accesorios",
-    categoryId: "accesorios",
-    description: "Pack de 3 chupetes con diseño ortodóntico que favorece el desarrollo bucal correcto.",
+    name: "Set de Juguetes Sensoriales",
+    price: 68000,
+    originalPrice: 85000,
+    image: productToys,
+    category: "Juguetería",
+    categoryId: "jugueteria",
+    description: "Set completo de peluches y sonajeros para estimular los sentidos de tu bebé desde los primeros meses.",
     rating: 5,
-    stock: 30,
+    stock: 20,
     discount: 20,
-    brand: "Baby Comfort",
-    age: "0-6 meses",
+    brand: "Fun Baby",
+    age: "0-12 meses",
     features: [
-      "Diseño ortodóntico",
-      "Silicona suave",
-      "Colores pastel",
+      "Colores estimulantes",
+      "Texturas variadas",
+      "Materiales seguros",
       "Libre de BPA"
     ]
   },
   {
     id: "4",
-    name: "Biberones Anti-Cólicos 260ml",
-    price: 38000,
-    image: productPacifier,
-    category: "Accesorios",
-    categoryId: "accesorios",
-    description: "Biberones con sistema anti-cólicos que reduce el malestar digestivo del bebé.",
+    name: "Coche de Paseo Premium",
+    price: 450000,
+    originalPrice: 520000,
+    image: productStroller,
+    category: "Paseadores",
+    categoryId: "paseadores",
+    description: "Coche de paseo elegante y funcional con sistema plegable, suspensión y múltiples posiciones de reclinado.",
     rating: 5,
-    stock: 20,
-    brand: "FlowEasy",
-    size: "260ml",
-    age: "0-12 meses",
+    stock: 8,
+    discount: 13,
+    brand: "Baby Comfort",
+    age: "0-36 meses",
     features: [
-      "Sistema anti-cólicos",
-      "Tetina anatómica",
-      "Vidrio resistente",
-      "Fácil limpieza"
+      "Sistema plegable",
+      "Suspensión suave",
+      "Múltiples posiciones",
+      "Capota expandible",
+      "Canasta amplia"
     ]
   },
   {
     id: "5",
-    name: "Shampoo Natural para Bebé 400ml",
-    price: 32000,
-    image: productShampoo,
-    category: "Cuidado Personal",
-    categoryId: "cuidado",
-    description: "Shampoo con ingredientes naturales, sin sulfatos ni parabenos. Ideal para el cuero cabelludo sensible.",
+    name: "Set Biberones y Chupos Anti-Cólicos",
+    price: 75000,
+    image: productBottles,
+    category: "Teteros y Chupos",
+    categoryId: "teteros",
+    description: "Set completo de 3 biberones con tetinas anti-cólicos y 3 chupos ortodónticos para el bienestar de tu bebé.",
     rating: 5,
-    stock: 40,
+    stock: 30,
     isNew: true,
-    brand: "Pure Baby",
-    size: "400ml",
+    brand: "FlowEasy",
     age: "0-12 meses",
     features: [
-      "Ingredientes naturales",
-      "Sin lágrimas",
-      "Dermatológicamente probado",
-      "Aroma suave"
+      "Sistema anti-cólicos",
+      "Tetina anatómica",
+      "Libre de BPA",
+      "Fácil limpieza"
     ]
   },
   {
     id: "6",
-    name: "Crema Protectora Pañal 100g",
-    price: 24000,
-    originalPrice: 30000,
-    image: productShampoo,
+    name: "Kit de Higiene y Cuidado Personal",
+    price: 95000,
+    originalPrice: 115000,
+    image: productHygiene,
     category: "Cuidado Personal",
     categoryId: "cuidado",
-    description: "Crema protectora que previene y alivia las rozaduras del pañal con óxido de zinc.",
+    description: "Kit completo con shampoo, loción, crema y gel de baño con ingredientes naturales para el cuidado diario.",
     rating: 5,
-    stock: 3,
+    stock: 25,
+    discount: 17,
+    brand: "Pure Baby",
+    age: "0-24 meses",
+    features: [
+      "Ingredientes naturales",
+      "Sin lágrimas",
+      "Dermatológicamente probado",
+      "Aromas suaves"
+    ]
+  },
+  {
+    id: "7",
+    name: "Toallitas Húmedas Sensitive x80",
+    price: 18000,
+    image: productWipes,
+    category: "Cuidado Personal",
+    categoryId: "cuidado",
+    description: "Toallitas húmedas para piel sensible con loción humectante, sin alcohol ni fragancias fuertes.",
+    rating: 5,
+    stock: 50,
+    brand: "Soft Care",
+    size: "Pack x80",
+    age: "0-24 meses",
+    features: [
+      "Piel sensible",
+      "Sin alcohol",
+      "Con loción",
+      "PH balanceado"
+    ]
+  },
+  {
+    id: "8",
+    name: "Manta Suave de Fleece Premium",
+    price: 48000,
+    originalPrice: 60000,
+    image: productBlanket,
+    category: "Ropa y Textiles",
+    categoryId: "ropa",
+    description: "Manta ultra suave de fleece premium, perfecta para mantener a tu bebé abrigado y cómodo.",
+    rating: 5,
+    stock: 12,
+    discount: 20,
+    brand: "Cozy Dreams",
+    size: "100x120cm",
+    age: "0-24 meses",
+    features: [
+      "Fleece premium",
+      "Ultra suave",
+      "Lavable a máquina",
+      "Hipoalergénica"
+    ]
+  },
+  {
+    id: "9",
+    name: "Set de Mordedores Refrigerantes",
+    price: 35000,
+    image: productTeethers,
+    category: "Accesorios",
+    categoryId: "accesorios",
+    description: "Set de mordedores coloridos con diferentes texturas para aliviar las molestias de la dentición.",
+    rating: 5,
+    stock: 25,
+    isNew: true,
+    brand: "Teething Relief",
+    age: "3-12 meses",
+    features: [
+      "Múltiples texturas",
+      "Se puede refrigerar",
+      "Fácil agarre",
+      "Libre de BPA"
+    ]
+  },
+  {
+    id: "10",
+    name: "Móvil Musical para Cuna",
+    price: 89000,
+    originalPrice: 110000,
+    image: productMobile,
+    category: "Accesorios",
+    categoryId: "accesorios",
+    description: "Móvil musical con melodías suaves y figuras en colores pastel para estimular y relajar a tu bebé.",
+    rating: 5,
+    stock: 10,
+    discount: 19,
+    brand: "Dream Baby",
+    age: "0-12 meses",
+    features: [
+      "Melodías relajantes",
+      "Rotación automática",
+      "Colores suaves",
+      "Fácil instalación"
+    ]
+  },
+  {
+    id: "11",
+    name: "Body de Algodón Orgánico",
+    price: 28000,
+    image: productOnesie,
+    category: "Ropa y Textiles",
+    categoryId: "ropa",
+    description: "Body de algodón orgánico 100% certificado, suave y cómodo para la piel delicada de tu bebé.",
+    rating: 5,
+    stock: 35,
+    brand: "Organic Baby",
+    size: "Talla 0-3M",
+    age: "0-3 meses",
+    features: [
+      "Algodón orgánico",
+      "Certificado GOTS",
+      "Botones de presión",
+      "Suave al tacto"
+    ]
+  },
+  {
+    id: "12",
+    name: "Crema Protectora Antipañalitis",
+    price: 32000,
+    originalPrice: 40000,
+    image: productCream,
+    category: "Cuidado Personal",
+    categoryId: "cuidado",
+    description: "Crema con óxido de zinc que previene y alivia las rozaduras del pañal de forma efectiva.",
+    rating: 5,
+    stock: 40,
     discount: 20,
     brand: "Protect Baby",
     size: "100g",
@@ -165,138 +295,35 @@ export const mockProducts: Product[] = [
     ]
   },
   {
-    id: "7",
-    name: "Body de Algodón Orgánico Pack x3",
-    price: 65000,
-    image: productBodysuit,
-    category: "Ropa y Textiles",
-    categoryId: "ropa",
-    description: "Pack de 3 bodies en colores pastel, hechos con algodón orgánico certificado.",
-    rating: 5,
-    stock: 18,
-    isNew: true,
-    brand: "Organic Baby Wear",
-    size: "Talla 0-3M",
-    age: "0-3 meses",
-    features: [
-      "Algodón orgánico",
-      "Certificado GOTS",
-      "Botones de presión",
-      "Colores pastel"
-    ]
-  },
-  {
-    id: "8",
-    name: "Manta Suave de Bambú",
-    price: 48000,
-    originalPrice: 60000,
-    image: productBlanket,
-    category: "Ropa y Textiles",
-    categoryId: "ropa",
-    description: "Manta ultra suave de fibra de bambú, transpirable y termorreguladora.",
-    rating: 5,
-    stock: 12,
-    discount: 20,
-    brand: "Bamboo Dreams",
-    size: "100x120cm",
-    age: "0-24 meses",
-    features: [
-      "Fibra de bambú",
-      "Transpirable",
-      "Termorreguladora",
-      "Diseño elegante"
-    ]
-  },
-  {
-    id: "9",
-    name: "Toallitas Húmedas Premium x80",
-    price: 18000,
-    image: productWipes,
-    category: "Cuidado Personal",
-    categoryId: "cuidado",
-    description: "Toallitas húmedas con loción humectante, sin alcohol ni fragancias fuertes.",
-    rating: 5,
-    stock: 50,
-    brand: "Soft Care",
-    size: "Pack x80",
-    age: "0-24 meses",
-    features: [
-      "Con loción",
-      "Sin alcohol",
-      "Textura suave",
-      "PH balanceado"
-    ]
-  },
-  {
-    id: "10",
-    name: "Mordedor Refrigerante",
-    price: 22000,
-    image: productTeether,
+    id: "13",
+    name: "Bañera Ergonómica con Accesorios",
+    price: 125000,
+    originalPrice: 150000,
+    image: productBathtub,
     category: "Accesorios",
     categoryId: "accesorios",
-    description: "Mordedor con gel refrigerante que alivia las molestias de la dentición.",
-    rating: 5,
-    stock: 25,
-    brand: "Teething Relief",
-    age: "3-12 meses",
-    features: [
-      "Gel refrigerante",
-      "Múltiples texturas",
-      "Fácil agarre",
-      "Libre de BPA"
-    ]
-  },
-  {
-    id: "11",
-    name: "Pañales Nocturnos Extra Absorción",
-    price: 58000,
-    image: productDiapers3,
-    category: "Pañales",
-    categoryId: "panales",
-    description: "Pañales especiales para la noche con extra absorción que garantizan 12 horas de sequedad.",
-    rating: 5,
-    stock: 20,
-    isNew: true,
-    brand: "Night Comfort",
-    size: "Talla 3 (6-10kg)",
-    age: "3-9 meses",
-    features: [
-      "12h de protección",
-      "Extra absorción",
-      "Suavidad nocturna",
-      "Ajuste seguro"
-    ]
-  },
-  {
-    id: "12",
-    name: "Set de Pijamas Térmicas",
-    price: 75000,
-    originalPrice: 95000,
-    image: productPajamas,
-    category: "Ropa y Textiles",
-    categoryId: "ropa",
-    description: "Set de 2 pijamas térmicas para mantener al bebé abrigado toda la noche.",
+    description: "Bañera ergonómica con soporte antideslizante y accesorios para un baño seguro y divertido.",
     rating: 5,
     stock: 8,
-    discount: 21,
-    brand: "Warm Nights",
-    size: "Talla 6-12M",
-    age: "6-12 meses",
+    discount: 17,
+    isNew: true,
+    brand: "Bath Baby",
+    age: "0-24 meses",
     features: [
-      "Tela térmica",
-      "Pies integrados",
-      "Cierre completo",
-      "Ultra suave"
+      "Diseño ergonómico",
+      "Base antideslizante",
+      "Con accesorios",
+      "Fácil de limpiar"
     ]
   },
   {
-    id: "13",
+    id: "14",
     name: "Silla de Comer Baby Premium",
     price: 189000,
     originalPrice: 220000,
     image: productHighchair,
-    category: "Accesorios",
-    categoryId: "accesorios",
+    category: "Montables",
+    categoryId: "montables",
     description: "Silla de comer con diseño ergonómico, bandeja extraíble y altura ajustable. Perfecta para la hora de las comidas.",
     rating: 5,
     stock: 6,
@@ -312,12 +339,12 @@ export const mockProducts: Product[] = [
     ]
   },
   {
-    id: "14",
+    id: "15",
     name: "Caminador Musical Interactivo",
     price: 165000,
     image: productWalker,
-    category: "Accesorios",
-    categoryId: "accesorios",
+    category: "Montables",
+    categoryId: "montables",
     description: "Caminador con juguetes interactivos, música y luces. Ayuda al desarrollo motor del bebé de forma segura y divertida.",
     rating: 5,
     stock: 4,
@@ -333,13 +360,13 @@ export const mockProducts: Product[] = [
     ]
   },
   {
-    id: "15",
+    id: "16",
     name: "Carro Eléctrico Montable Deportivo",
     price: 420000,
     originalPrice: 500000,
     image: productCar,
-    category: "Accesorios",
-    categoryId: "accesorios",
+    category: "Montables",
+    categoryId: "montables",
     description: "Carro montable eléctrico con diseño deportivo, control remoto para padres y luces LED. Diversión asegurada para los pequeños.",
     rating: 5,
     stock: 2,
