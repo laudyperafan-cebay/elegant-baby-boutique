@@ -3,32 +3,25 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Star } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "@/hooks/use-toast";
+import { Product } from "@/data/mockProducts";
 
 interface ProductCardProps {
-  id: string;
-  name: string;
-  price: number;
-  originalPrice?: number;
-  image: string;
-  category: string;
-  rating?: number;
-  stock?: number;
-  isNew?: boolean;
-  discount?: number;
+  product: Product;
 }
 
-const ProductCard = ({
-  id,
-  name,
-  price,
-  originalPrice,
-  image,
-  category,
-  rating = 5,
-  stock = 10,
-  isNew = false,
-  discount,
-}: ProductCardProps) => {
+const ProductCard = ({ product }: ProductCardProps) => {
+  const { addToCart } = useCart();
+  const { id, name, price, originalPrice, image, category, rating = 5, stock = 10, isNew = false, discount } = product;
+
+  const handleAddToCart = () => {
+    addToCart(product, 1);
+    toast({
+      title: "¡Producto agregado!",
+      description: `${name} se ha añadido al carrito`,
+    });
+  };
   return (
     <Card className="group overflow-hidden border-2 border-border hover:border-primary transition-smooth shadow-soft hover:shadow-elegant h-full flex flex-col">
       <Link to={`/producto/${id}`}>
@@ -104,6 +97,7 @@ const ProductCard = ({
         <Button
           className="w-full rounded-full shadow-soft hover:shadow-medium transition-smooth group/btn"
           disabled={stock === 0}
+          onClick={handleAddToCart}
         >
           {stock === 0 ? (
             "Agotado"
