@@ -153,45 +153,59 @@ const Footer = () => {
           {/* Métodos de Pago */}
           <div>
             <h3 className="font-display text-lg font-semibold mb-4 text-foreground">Métodos de Pago</h3>
-            <p className="text-sm text-muted-foreground mb-4">Paga de forma segura con:</p>
-            <div className="grid grid-cols-2 gap-3">
+            <p className="text-sm text-muted-foreground mb-3">Paga de forma segura con:</p>
+            <div className="flex flex-wrap gap-2">
               {/* Visa */}
-              <div className="bg-white rounded-lg p-3 shadow-sm border border-border/50 flex items-center justify-center">
-                <svg viewBox="0 0 48 48" className="h-8 w-auto">
-                  <path fill="#1565C0" d="M45,35c0,2.209-1.791,4-4,4H7c-2.209,0-4-1.791-4-4V13c0-2.209,1.791-4,4-4h34c2.209,0,4,1.791,4,4V35z"/>
-                  <path fill="#FFF" d="M15.186 19l-2.626 7.832c0 0-.667-3.313-.733-3.729-1.495-3.411-3.701-3.221-3.701-3.221L10.846 30v-.002h3.078L18.281 19H15.186zM17.689 30L20.56 30 22.296 19 19.389 19zM38.008 19h-3.021l-4.71 11h2.852l.588-1.571h3.596L37.619 30h2.613L38.008 19zM34.513 26.328l1.563-4.157.818 4.157H34.513zM26.369 22.206c0-.606.498-1.057 1.926-1.057.928 0 1.991.674 1.991.674l.466-2.309c0 0-1.358-.515-2.691-.515-3.019 0-4.576 1.444-4.576 3.272 0 3.306 3.979 2.853 3.979 4.551 0 .291-.231.964-1.888.964-1.662 0-2.759-.609-2.759-.609l-.495 2.216c0 0 1.063.606 3.117.606 2.059 0 4.915-1.54 4.915-3.752C30.354 23.586 26.369 23.394 26.369 22.206z"/>
-                  <path fill="#FFC107" d="M12.212,24.945l-0.966-4.748c0,0-0.437-1.029-1.573-1.029c-1.136,0-4.44,0-4.44,0S10.894,20.84,12.212,24.945z"/>
+              <div className="bg-muted/60 rounded-md px-3 py-2 flex items-center justify-center">
+                <svg viewBox="0 0 48 32" className="h-5 w-auto">
+                  <rect fill="#1A1F71" width="48" height="32" rx="4"/>
+                  <text x="24" y="20" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold" fontStyle="italic">VISA</text>
                 </svg>
               </div>
               {/* Mastercard */}
-              <div className="bg-white rounded-lg p-3 shadow-sm border border-border/50 flex items-center justify-center">
-                <svg viewBox="0 0 48 48" className="h-8 w-auto">
-                  <path fill="#3F51B5" d="M45,35c0,2.209-1.791,4-4,4H7c-2.209,0-4-1.791-4-4V13c0-2.209,1.791-4,4-4h34c2.209,0,4,1.791,4,4V35z"/>
-                  <circle fill="#FFC107" cx="30" cy="24" r="10"/>
-                  <circle fill="#FF3D00" cx="18" cy="24" r="10"/>
-                  <path fill="#FF9800" d="M18,14c-3.497,0-6.584,1.794-8.387,4.511C11.022,18.186,12.468,18,14,18c3.497,0,6.584,1.794,8.387,4.511C20.978,22.186,19.532,22,18,22c-2.209,0-4,1.791-4,4s1.791,4,4,4c1.532,0,2.978-0.186,4.387-0.511C20.584,32.206,17.497,34,14,34c-1.532,0-2.978-0.186-4.387-0.511C11.416,30.772,14.503,28.978,18,28.978V14z"/>
+              <div className="bg-muted/60 rounded-md px-3 py-2 flex items-center justify-center">
+                <svg viewBox="0 0 48 32" className="h-5 w-auto">
+                  <rect fill="#f5f5f5" width="48" height="32" rx="4"/>
+                  <circle cx="18" cy="16" r="10" fill="#EB001B"/>
+                  <circle cx="30" cy="16" r="10" fill="#F79E1B"/>
+                  <path d="M24 8.8a10 10 0 0 0 0 14.4 10 10 0 0 0 0-14.4z" fill="#FF5F00"/>
                 </svg>
               </div>
-              {/* Nequi */}
-              <div className="bg-white rounded-lg p-3 shadow-sm border border-border/50 flex items-center justify-center">
-                <div className="flex items-center gap-1.5">
-                  <div className="h-6 w-6 rounded-full bg-[#E91E63] flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">N</span>
+              {/* PSE */}
+              <div className="bg-muted/60 rounded-md px-3 py-2 flex items-center justify-center">
+                <div className="flex items-center gap-1">
+                  <div className="h-5 w-5 rounded-full bg-[#003DA5] flex items-center justify-center">
+                    <span className="text-white text-[8px] font-bold">PSE</span>
                   </div>
-                  <span className="text-sm font-bold text-[#E91E63]">Nequi</span>
+                </div>
+              </div>
+              {/* Efecty */}
+              <div className="bg-muted/60 rounded-md px-3 py-2 flex items-center justify-center">
+                <span className="text-xs font-bold text-[#FFDD00] bg-[#1D1D1B] px-2 py-0.5 rounded">efecty</span>
+              </div>
+              {/* Nequi */}
+              <div className="bg-muted/60 rounded-md px-3 py-2 flex items-center justify-center">
+                <div className="flex items-center gap-1">
+                  <div className="h-5 w-5 rounded-full bg-[#E91E63] flex items-center justify-center">
+                    <span className="text-white text-[8px] font-bold">N</span>
+                  </div>
+                  <span className="text-xs font-bold text-[#E91E63]">Nequi</span>
                 </div>
               </div>
               {/* Daviplata */}
-              <div className="bg-white rounded-lg p-3 shadow-sm border border-border/50 flex items-center justify-center">
-                <div className="flex items-center gap-1.5">
-                  <div className="h-6 w-6 rounded-full bg-[#ED1C24] flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">D</span>
+              <div className="bg-muted/60 rounded-md px-3 py-2 flex items-center justify-center">
+                <div className="flex items-center gap-1">
+                  <div className="h-5 w-5 rounded-full bg-[#ED1C24] flex items-center justify-center">
+                    <span className="text-white text-[8px] font-bold">D</span>
                   </div>
-                  <span className="text-sm font-bold text-[#ED1C24]">Daviplata</span>
+                  <span className="text-xs font-bold text-[#ED1C24]">Daviplata</span>
                 </div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground mt-3">
+            <p className="text-xs text-muted-foreground mt-3 flex items-center gap-1">
+              <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
               Transacciones 100% seguras
             </p>
           </div>
