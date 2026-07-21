@@ -1,6 +1,6 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
-import { getProductById } from "@/data/mockProducts";
+import { getCatalogProductById as getProductById } from "../catalog";
 
 export default defineTool({
   name: "get_product",
